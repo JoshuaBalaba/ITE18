@@ -166,36 +166,3 @@ function detectCollision(a, b) {
            a.y < b.y + b.height &&
            a.y + a.height > b.y;
 }
-
-
-
-//new
-
-
-// Get the audio element
-const backgroundMusic = document.getElementById("background-music");
-
-// Start playing music when the page loads
-window.addEventListener("load", () => {
-  backgroundMusic.play().catch((error) => {
-    console.error("Music playback error:", error);
-  });
-});
-
-// Optionally, add a button to toggle music
-const musicToggleButton = document.createElement("button");
-musicToggleButton.innerText = "Toggle Music";
-document.body.appendChild(musicToggleButton);
-
-musicToggleButton.addEventListener("click", () => {
-  if (backgroundMusic.paused) {
-    backgroundMusic.play();
-    musicToggleButton.innerText = "Pause Music";
-  } else {
-    backgroundMusic.pause();
-    musicToggleButton.innerText = "Play Music";
-  }
-});
-
-
-
